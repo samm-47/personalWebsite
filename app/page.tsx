@@ -38,8 +38,8 @@ const HomePage = () => {
     <div className="about-text">
       <h2>About Me</h2>
       <p>
-        Hello! I’m a student at <strong>Arizona State University</strong> pursuing a 
-        <strong> Bachelor's and Master's in Computer Science</strong> with a 
+        Hello! I&apos;m a student at <strong>Arizona State University</strong> pursuing a 
+        <strong> Bachelor&apos;s and Master&apos;s in Computer Science</strong> with a 
         <strong> minor in Statistics</strong>. I have experience in software engineering, 
         and I am enthusiastic about expanding my knowledge in 
         <strong> Machine Learning</strong> and <strong>AI development</strong>.
@@ -72,7 +72,7 @@ const HomePage = () => {
       <div className="timeline-content">
         <h3>Software Engineering Intern - <a href="https://www.minvestfinance.com" target="_blank" className="company-name minvest">Minvest Finance</a>📈</h3>
         <p>
-          • Participated in backend development for the Minvest Beta Version, enabling users to visualize the numerical variance between their target beta and the stock's beta through the use of web scraping.<br/>
+          • Participated in backend development for the Minvest Beta Version, enabling users to visualize the numerical variance between their target beta and the stock&apos;s beta through the use of web scraping.<br/>
           • Developed the MinvestED platform with React.js, enabling data storage for users to log back in and resume their sessions.<br/>
           • Developed and implemented a dynamic live progress bar feature for video playback and engineered real-time quiz functionality, delivering immediate feedback on user responses. <br/>
           <br></br>
@@ -87,7 +87,7 @@ const HomePage = () => {
       <div className="timeline-content">
         <h3>Software Engineering Intern - <a href="https://www.gm.com" target="_blank" className="company-name gm">General Motors</a>🛻</h3>
         <p>
-          • Collaborated across multiple teams to enhance GM's Test Drive website through frontend and backend software development, optimizing the testing platform for various software applications within GMIT and Engineering.<br/>
+          • Collaborated across multiple teams to enhance GM&apos;s Test Drive website through frontend and backend software development, optimizing the testing platform for various software applications within GMIT and Engineering.<br/>
           • Resulted in significant gains in testing capacity due to the integration of the dashboard and issue classification model.<br></br>
           <br></br>
           <strong> Technical Skills Utilized: </strong> React.js, Pandas, Flask, Azure DevOps Server, Natural Language Processing, SQL, Python
