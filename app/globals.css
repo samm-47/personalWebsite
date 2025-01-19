@@ -1,21 +1,493 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap'); /* Import Poppins font */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.navbar {
+  position: sticky;
+  display: flex; /* Use flexbox to arrange links horizontally */
+  justify-content: flex-end; /* Align the links to the right */
+  align-items: center; /* Align links vertically */
+  background-color:rgba(0, 0, 0, 0.4);
+  /* background-image: url(http://transparenttextures.com/patterns/blu-stripes.png);*/
+  background-image: url(http://transparenttextures.com/patterns/stressed-linen.png);
+  padding: 1rem;
+  
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 0 15px; /* Space out the tabs horizontally */
+  transition: background-color 0.3s;
+}
+
+
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: #0000009b;
+  background-image: url(http://transparenttextures.com/patterns/stressed-linen.png);
+
+  
+  
+}
+
+.hero .headshot {
+  border-radius: 50%; /* Makes the image circular */
+  width: 250px;
+  height: 250px;
+  margin-right: 2rem;
+  border: 2px solid #ffffff; /* White border around the image */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.6); /* Glowing effect around the circle */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.hero-text {
+  max-width: 1000px;
+  text-align: center; /* Center text horizontally */
+}
+
+.hero-text h1 {
+  font-size: 5rem; /* Increase the font size for impact */
+  color: #333;
+  font-family: 'Poppins', sans-serif; /* Use Poppins font */
+  font-weight: 600; /* Make it bold */
+  letter-spacing: 2px; /* Add spacing between letters for a modern look */
+  text-transform: uppercase; /* Make the name uppercase for emphasis */
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 1), /* Bright and intense white shadow */
+    0 0 15px rgba(255, 255, 255, 0.8), /* Larger white shadow with bright opacity */
+    0 0 25px rgba(255, 255, 255, 0.7), /* Even larger shadow with slightly dimmer opacity */
+    0 0 35px rgba(255, 255, 255, 0.6); /* Larger shadow for a stronger outline effect */
+  margin: 0; /* Remove default margin */
+}
+
+.hero-text h2 {
+  font-size: 2rem; /* Slightly smaller than h1 for hierarchy */
+  color: #fff; /* White color to make it stand out */
+  font-family: 'Poppins', sans-serif; /* Use Poppins font for consistency */
+  font-weight: 400; /* Lighter weight compared to h1 */
+  letter-spacing: 1px; /* Add some spacing for modern look */
+  text-transform: uppercase; /* Keep the uppercase style */
+  text-shadow: 
+    0 0 4px rgba(255, 255, 255, 0.8), /* Slight white shadow for the h2 */
+    0 0 8px rgba(255, 255, 255, 0.6); /* Slightly less intense shadow for contrast */
+  margin: 0; /* Remove default margin */
+}
+
+.hero-subtext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem; /* Space between the name and job title + icons */
+}
+
+.hero-subtext h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 1rem; /* Add some space between the job title and the icons */
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Adds even spacing between the buttons */
+}
+
+.hero-buttons a {
+  display: inline-block;
+  
+
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons a img.linkedin-icon {
+  width: 45px; /* Adjust the size of the LinkedIn icon */
+  height: 40px;
+  margin-right: 8px; /* Add some space between the icon and the text */
+}
+
+.hero-buttons a img.github-icon {
+  width: 50px; /* Adjust the size of the GitHub icon */
+  height: 40px;
+  margin-right: 8px; /* Add some space between the icon and the text */
+}
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f9f9f9, #e4e4e4); /* Matching gradient background with Work Experience */
+  border-radius: 10px; /* Same border radius as work-experience */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Adding subtle shadow */
+  overflow: hidden; /* Ensures the content fits within the border radius */
+}
+
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  gap: 30px;
+  max-width: 1200px; /* Max width for large screens */
+  width: 90%;
+}
+
+.about-text {
+  max-width: 600px; /* Ensures the text doesn't get too wide */
+}
+
+.about h2 {
+  font-size: 36px; /* Bigger, more impactful header */
+  margin-bottom: 20px;
+  color: #2a2a2a; /* Dark color for the header */
+  text-transform: uppercase; /* For a more polished look */
+  letter-spacing: 2px; /* Slight letter spacing for effect */
+  font-weight: 700;
+  text-align: center;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555; /* A softer text color */
+  text-align: center; /* Center text for better readability */
+  max-width: 600px;
+  margin: 0 auto; /* Centers the paragraph */
+}
+
+.about p strong {
+  color: #2a2a2a; /* Highlight the important terms in dark color */
+  font-weight: 600; /* Emphasize the important terms */
+}
+
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center the text for smaller screens */
+  }
+
+  .about-text {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .about h2 {
+    font-size: 30px; /* Adjust the font size for smaller screens */
+  }
+
+  .about p {
+    font-size: 16px; /* Adjust paragraph size */
+  }
+
+  
+}
+
+
+/* Work Experience Section */
+.work-experience {
+  background: linear-gradient(135deg, #f9f9f9, #e4e4e4); /* Subtle gradient */
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+.work-experience h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 50px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #809bb5; /* Blue line */
+}
+
+.timeline-content {
+  max-width: 70%;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.timeline-content:hover {
+  transform: translateX(10px);
+}
+
+.timeline-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Date Styling */
+.timeline-date {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.timeline-date span {
+  display: block;
+  font-size: 16px;
+  color: #7891a9; /* Match the line color */
+}
+
+/* Hover Effects for Date */
+.timeline-item:hover .timeline-date span {
+  color: #426271; /* Change color on hover */
+}
+/* Company Name Colors */
+.company-name {
+  font-weight: bold;
+}
+
+.company-name.citizens {
+  color: #2c9e5b; /* Citizens Bank green */
+}
+
+.company-name.minvest {
+  color: #5d3da2; /* Minvest Finance orange */
+}
+
+.company-name.gm {
+  color: #22569e; /* General Motors blue */
+}
+
+/* Optionally add hover effects for the company names */
+.company-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
+  .timeline-item::before {
+    display: none; /* Hide line on mobile */
+  }
+
+  .timeline-content {
+    max-width: 100%;
+  }
+
+  .timeline-date {
+    text-align: left;
+    margin-top: 15px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+
+/* Portfolio Section */
+.portfolio {
+  background: linear-gradient(135deg, #f9f9f9, #e4e4e4); /* Subtle gradient */
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.project-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-card .project-date {
+  display: block;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.project-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 0px;
+}
+.project-card .github-logo {
+  width: 50px; /* Adjust size as needed */
+  height: 40px;
+  background-color: transparent;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Adds a subtle dark shadow */
+}
+.project-card .test-logo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px;
+  background-color: transparent;
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.5)); /* Adds a subtle dark shadow */
+}
+
+.project-card .btn:hover .github-logo {
+  transform: scale(1.1);
+  filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.7)); /* Darker shadow on hover */
+}
+.project-card .btn:hover .test-logo {
+  transform: scale(1.1);
+  filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.7)); /* Darker shadow on hover */
+}
+.center-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stacks the content vertically */
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers horizontally */
+  padding: 20px; /* Padding around the content */
+}
+
+.center-card h3, 
+.center-card p {
+  margin: 10px 0; /* Ensure consistent spacing between elements */
+}
+
+
+
+.github-logo:hover {
+  transform: scale(1.1); /* Slight hover enlargement */
+}
+
+
+
+
+
+/* Resume Section */
+.resume {
+  background: linear-gradient(135deg, #f9f9f9, #e4e4e4); /* Subtle gradient */
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 50px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  
+}
+.resume h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.resume-summary {
+  text-align: center;
+}
+
+.resume-summary p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.resume-summary .btn {
+  background-color: #2a2a2a;
+  color: #fff;
 }
